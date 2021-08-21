@@ -1,9 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 
-import Dropdown from "./common/dropdown";
-
-import { GET_ALL_COUNTRIES_QUERY } from "../graphql/queries/query";
+import { GET_ALL_COUNTRIES_QUERY } from "../../graphql/queries/query";
 
 const CountriesDropdown = () => {
   const { loading, error, data } = useQuery(GET_ALL_COUNTRIES_QUERY);
@@ -17,7 +15,17 @@ const CountriesDropdown = () => {
   }
 
   const { countries } = data;
-  return <Dropdown data={countries || []} />;
+
+  return (
+    <div className="bp3-select">
+      <select>
+        <option></option>
+        {countries.map((country) => (
+          <option key={country["id"]}>{country["name"]}</option>
+        ))}
+      </select>
+    </div>
+  );
 };
 
 export default CountriesDropdown;
