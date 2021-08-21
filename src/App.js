@@ -1,9 +1,11 @@
+import CountriesDropdown from "./components/countriesDropdown";
+
 import "./App.css";
 
 const App = () => {
   return (
     <main>
-      <h1>Virtual Receptionist</h1>
+      <CountriesDropdown />
     </main>
   );
 };
