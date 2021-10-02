@@ -1,9 +1,13 @@
+import React from "react";
+
+import Home from "./pages/home";
+
 import "./App.css";
 
 const App = () => {
   return (
     <main>
-      <h1>Virtual Receptionist</h1>
+      <Home />
     </main>
   );
 };
