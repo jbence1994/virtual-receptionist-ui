@@ -1,0 +1,19 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+}
+
+"Represents any country that is available to represent a guest's address country"
+type Country {
+    "Represents the unique identifier of a country"
+    id: Int!
+    "Represents the well known name of a country"
+    name: String
+}
+
+"Represents the root query endpoint"
+type Query {
+    countries: [Country]
+    country(id: Int!): Country
+}

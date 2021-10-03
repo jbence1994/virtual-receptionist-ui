@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 
-import getApolloClient from "./config/apollo-client";
+import getApolloClient from "./config/apolloClient";
 
 ReactDOM.render(
   <ApolloProvider client={getApolloClient()}>

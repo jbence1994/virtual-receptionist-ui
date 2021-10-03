@@ -9,4 +9,4 @@ const GET_ALL_COUNTRIES_QUERY = gql`
   }
 `;
 
-export { GET_ALL_COUNTRIES_QUERY };
+export default GET_ALL_COUNTRIES_QUERY;
